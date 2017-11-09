@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <title>Array</title>
 </head>
-<body bgcolor="#669933">
+<body bgcolor="#99CC66">
     <img src="img/Description.png" style="max-width: 100%";>
-    <hr>
+
     <br>
     <font size="5" color="#4D4D4D">
         <hr>
-            <form method="post" th:action="@{/array}" th:object="${userInputModel}">
-                enter some simple digits comas separate: <input type="text" th:field="*{userInput}">
-                <input type="submit" value="Submit">
-            </form>
+            <center>
+                <form method="post" th:action="@{/array}" th:object="${userInputModel}">
+                    enter some simple digits comas separate: <input type="text" th:field="*{userInput}">
+                    <input type="submit" value="Submit">
+                </form>
+            </center>
         <hr>
         <p th:if="${message1}!=null" th:text="${message1}"></p><br>
         <p th:if="${message2}!=null" th:text="${message2}"></p><br>
