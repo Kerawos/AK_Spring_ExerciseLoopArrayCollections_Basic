@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body bgcolor="#669933">
+    <img src="img/Description.png" style="max-width: 100%";>
+    <hr>
+    <br>
+    <font size="5" color="#4D4D4D">
+        <hr>
+            <form method="post" th:action="@{/array}" th:object="${userInputModel}">
+                enter some simple digits comas separate: <input type="text" th:field="*{userInput}">
+                <input type="submit" value="Submit">
+            </form>
+        <hr>
+        <p th:if="${message1}!=null" th:text="${message1}"></p><br>
+        <p th:if="${message2}!=null" th:text="${message2}"></p><br>
+        <p th:if="${message3}!=null" th:text="${message3}"></p><br>
+        <p th:if="${message4}!=null" th:text="${message4}"></p><br>
+        <p th:if="${message5}!=null" th:text="${message5}"></p><br>
+        <p th:if="${message6}!=null" th:text="${message6}"></p><br>
+        <hr>
+            <i>
+                <footer>
+                    <b><p>EXPECTED RESULTS FOR ARRAY ["sample","2","Oskar","test"] SHOULD BE:</p></b>
+                    <p>Longest word is : "sample" </p><br>
+                    <br>
+                    <b><p>EXPECTED RESULTS FOR ARRAY ["1,5,-2,0,1"] SHOULD BE:</p></b>
+                    Biggest number is : 5 <br>
+                    Smallest number is : -2<br>
+                    Average number is : 1.0<br>
+                    Sorted array : [-2,0,1,1,5]<br>
+                    Even array is : [-2,0]<br>
+                    <br>
+                </footer>
+            </i>
+        <hr>
+    </font>
+
+
+
+
+
+</body>
+</html>
