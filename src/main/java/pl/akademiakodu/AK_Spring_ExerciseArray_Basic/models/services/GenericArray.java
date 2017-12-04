@@ -1,7 +1,14 @@
 package pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models.services;
 
+/**
+ * Inport section
+ */
 import org.springframework.stereotype.Service;
 
+/**
+ * Responsible for managing integer or string arrays
+ * @param <type>
+ */
 @Service
 public class GenericArray<type>{
 
