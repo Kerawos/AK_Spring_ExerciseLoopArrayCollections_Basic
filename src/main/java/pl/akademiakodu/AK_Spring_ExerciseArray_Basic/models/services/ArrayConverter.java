@@ -3,7 +3,6 @@ package pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models.services;
 /**
  * Import section
  */
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,8 +14,7 @@ public class ArrayConverter implements InputToArray {
     /**
      * Declaring Indicator service
      */
-    @Autowired ArrayIndicator arrayIndicator;
-
+    ArrayIndicator arrayIndicator;
 
     @Override
     public String[] toArray(String userInput){
@@ -29,6 +27,7 @@ public class ArrayConverter implements InputToArray {
 
     @Override
     public int[] generateIntArray(String[] stringArray) throws IllegalArgumentException {
+        arrayIndicator = new ArrayIndicator();
         int[]ints = new int[stringArray.length];
         for (int i = 0; i < ints.length; i++) {
             if (arrayIndicator.isInteger(stringArray[i])){
