@@ -1,35 +1,54 @@
 package pl.akademiakodu.AK_Spring_ExerciseArray_Basic.controllers;
 
+/**
+ * Import section
+ */
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models.OnlyArray;
-import pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models.bags.UserInputModel;
-import pl.akademiakodu.AK_Spring_ExerciseArray_Basic.services.ArrayConverter;
-import pl.akademiakodu.AK_Spring_ExerciseArray_Basic.services.ArrayIndicator;
+
+import pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models.UserInputModel;
+import pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models.services.ArrayConverter;
+import pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models.services.ArrayIndicator;
+import pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models.services.OnlyArray;
 
 import java.util.Arrays;
 
+/**
+ * Controller responsible for array exercise
+ */
 @Controller
 public class ArrayController {
 
-    OnlyArray onlyArray;
-    ArrayConverter arrayConverter;
-    UserInputModel userInputModel;
+    /**
+     * Variables and services declaration
+     */
+    @Autowired private OnlyArray onlyArray;
+    @Autowired private ArrayConverter arrayConverter;
+    private UserInputModel userInputModel;
 
-
+    /**
+     * Method get to user template to fill and submit
+     * @param model giving user input model to store inputs
+     * @return fulfilled template user input
+     */
     @GetMapping("/array")
     public String arrayGet(Model model){
         model.addAttribute("userInputModel", new UserInputModel());
         return "array";
     }
 
+    /**
+     * Method responsible for getting result of array logic
+     * @param userInputModel holding user inputs
+     * @param model holding calculations
+     * @return calculations from services
+     */
     @PostMapping("/array")
     public String arrayPost(@ModelAttribute("userInputModel") UserInputModel userInputModel, Model model){
-        onlyArray = new OnlyArray();
-        arrayConverter = new ArrayConverter();
         //making array from string
         String[]ourArray = arrayConverter.toArray(userInputModel.getUserInput());
         //check which kind of array
@@ -49,7 +68,5 @@ public class ArrayController {
         }
         return "array";
     }
-
-
 
 }

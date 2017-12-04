@@ -1,4 +1,4 @@
-package pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models.bags;
+package pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models;
 
 public class UserInputModel {
 

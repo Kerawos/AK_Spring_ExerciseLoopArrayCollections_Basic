@@ -3,8 +3,9 @@ package pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import pl.akademiakodu.AK_Spring_ExerciseArray_Basic.services.ArrayConverter;
-import pl.akademiakodu.AK_Spring_ExerciseArray_Basic.services.ArrayIndicator;
+import pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models.services.ArrayConverter;
+import pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models.services.ArrayIndicator;
+import pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models.services.OnlyArray;
 
 import static org.junit.Assert.*;
 

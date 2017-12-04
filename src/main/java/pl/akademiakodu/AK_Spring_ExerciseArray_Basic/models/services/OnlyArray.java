@@ -1,5 +1,8 @@
-package pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models;
+package pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models.services;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class OnlyArray {
 
     public int maxOf(int[] intArray){

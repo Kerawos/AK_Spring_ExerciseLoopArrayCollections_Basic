@@ -3,9 +3,7 @@ package pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import pl.akademiakodu.AK_Spring_ExerciseArray_Basic.services.ArrayIndicator;
-
-import java.util.Arrays;
+import pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models.services.OnlyLoop;
 
 import static org.junit.Assert.*;
 
