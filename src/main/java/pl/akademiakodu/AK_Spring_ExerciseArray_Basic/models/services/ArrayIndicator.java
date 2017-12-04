@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ArrayIndicator {
 
-    public static boolean isInteger(String s) {
+    public boolean isInteger(String s) {
         try {
             Integer.parseInt(s);
         } catch(NumberFormatException e) {
@@ -16,7 +16,7 @@ public class ArrayIndicator {
         return true;
     }
 
-    public static boolean isIntArray(String[] unknownArray){
+    public boolean isIntArray(String[] unknownArray){
         for (String o : unknownArray) {
             if (!isInteger(o)){
                 return false;
