@@ -28,7 +28,6 @@ public class OnlyLoopTest {
         assertEquals("1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, ", onlyLoop.printFirst12OddDigits());
         assertEquals("***---******---******---***", onlyLoop.print3SOS());
         assertEquals("120", onlyLoop.factorialOf5());
-        assertEquals("120", onlyLoop.factorialOf5());
     }
 
     @Test public void testLotto(){

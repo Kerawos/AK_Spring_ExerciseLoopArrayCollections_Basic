@@ -1,5 +1,8 @@
 package pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models;
 
+/**
+ * Storage for user inputs
+ */
 public class UserInputModel {
 
     private String userInput;

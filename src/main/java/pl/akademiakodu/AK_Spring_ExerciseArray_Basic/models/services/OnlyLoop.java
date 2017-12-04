@@ -1,15 +1,24 @@
 package pl.akademiakodu.AK_Spring_ExerciseArray_Basic.models.services;
 
+/**
+ * Import section
+ */
 import org.springframework.stereotype.Service;
 
 import java.util.Random;
 
+/**
+ * Responsible for loop calculations and exercise
+ */
 @Service
 public class OnlyLoop {
 
     private StringBuilder sb;
 
-    //task1:
+    /**
+     * Method adding 5 times listed word
+     * @return result of 5 listed word: 'Hello World, Hello World, Hello World, Hello World, Hello World, '
+     */
     public String print5TimesHelloWorld(){
         sb = new StringBuilder();
 
@@ -19,8 +28,10 @@ public class OnlyLoop {
         return sb.toString();
     }
 
-
-    // task2: from 15 to 8 without 10
+    /**
+     * Method gathering all digits from 15 to 8 (all included) without digit 10.
+     * @return string output '15, 14, 13, 12, 11, 9, 8'
+     */
     public String printDigitsFrom8To15Without10(){
         sb = new StringBuilder();
 
@@ -33,7 +44,10 @@ public class OnlyLoop {
         return sb.toString();
     }
 
-    //task3:
+    /**
+     * Method will gather first 12 odd digits
+     * @return string output '1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, '
+     */
     public String printFirst12OddDigits(){
         sb = new StringBuilder();
         for (int i = 0; i < 24; i++) {
@@ -44,7 +58,10 @@ public class OnlyLoop {
         return sb.toString();
     }
 
-    //task4: sos signal is" ***---***
+    /**
+     * Method will gather proper SOS signal. One part of signal is: '***---***'
+     * @return string as signal: '***---******---******---***'
+     */
     public String print3SOS(){
         sb = new StringBuilder();
         int counter = 0;
@@ -62,7 +79,11 @@ public class OnlyLoop {
         return sb.toString();
     }
 
-    //task5: factorial from 5
+
+    /**
+     * Method will calculate factorial of digit 5
+     * @return digit: 120
+     */
     public String factorialOf5(){
         sb = new StringBuilder();
         int result = 1;
@@ -73,7 +94,10 @@ public class OnlyLoop {
         return sb.toString();
     }
 
-    //task6: take 6 random digits (from 1 to 49)
+    /**
+     * Method generate 6 times random unique digit between 1-49
+     * @return random 6 digit
+     */
     public String generate6LottoDigits(){
         sb = new StringBuilder();
         Random random = new Random();
